@@ -56,6 +56,7 @@ function goIndex(response, request) {
 // 创建一个web服务器
 const server = http.createServer(function(request, response) {
   var pathname = url.parse(request.url).pathname
+
   var realpath = __dirname + pathname
 
   if (pathname === './favicon.ico') {
