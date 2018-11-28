@@ -7,7 +7,7 @@ var path = require('path');
 
 var BASE_DIR = __dirname;
 var STATIC = BASE_DIR  ;
-var CACHE_TIME = 60*60*24*365;
+var CACHE_TIME = 60*3;
 
 const {lookup} = require('./conf/mime_type')
 

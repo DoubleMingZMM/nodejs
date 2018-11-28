@@ -28,4 +28,4 @@ const server = http.createServer(function(request, response) {
 });
 
 // 服务器监听端口
-server.listen(55555, "localhost");
+server.listen(22233, "localhost");
