@@ -10,12 +10,7 @@ const staticModule = require('./static_module')
 // const httpParam = require('./http_param')
 
 function goIndex(response) {
-  response.writeHead(200, {
-    "Content-Type": "text/html;charset=UTF-8"
-  });
-  var readpath = __dirname + '/' + url.parse('index.jade').pathname
-  var pathname = fs.readFileSync(readpath)
-  response.end(pathname)
+  response.render('index.jade')
 }
 
 // 创建一个web服务器

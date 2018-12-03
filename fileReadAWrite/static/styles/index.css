@@ -7,3 +7,11 @@ html{
   overflow: hidden;
   background-color: #DDDDDD;
 }
+
+h1{
+  text-align: center;
+}
+
+button#upload{
+  display: block;
+}
