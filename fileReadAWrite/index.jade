@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Nodejs file monitor
+    link(rel='stylesheet', href='/static/styles/mormalize.css')
+    link(rel='stylesheet', href='/static/styles/index.css')
+    script(src='http://wulv5.com/js/socket.io.min.js')
+    script(src='static/index.js')
+  body
+    div#main_content
+      h1 文件读写
+      div
+        textarea(id='taxtarea', rows='30', cols='120')
+        div#upload 保存
