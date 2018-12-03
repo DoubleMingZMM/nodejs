@@ -26,7 +26,6 @@ function uploadPic(request, response) {
 }
 
 const server = http.createServer(function(request, response) {
-
   const pathname = url.parse(request.url).pathname
   if (pathname === 'favicon.ico') {
     return false
