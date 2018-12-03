@@ -17,7 +17,6 @@ function goIndex(response) {
 
 function uploadPic(request, response) {
   const readpath = __dirname + '/show_image.html'
-  // console.log('readpath=======================>', readpath)
   const indexpage = fs.readFileSync(readpath)
   const form = new formidable.IncomingForm()
   form.parse(request, function(error, fileds, files) {
@@ -33,17 +32,15 @@ function uploadPic(request, response) {
 const server = http.createServer(function(request, response) {
 
   const pathname = url.parse(request.url).pathname
-  console.log('pathname=======================>', pathname)
   if (pathname === 'favicon.ico') {
     return false
   } else if (pathname === '/') {
     goIndex(response)
-  }else if (request.url === '/upload') {
-    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+  }else if (pathname === '/upload') {
     uploadPic(request, response)
   } else {
     staticModule.getStaticFile(pathname, response, request)
   }
 })
 
-server.listen(9999, 'localhost')
+server.listen(1234, 'localhost')
