@@ -1,13 +1,12 @@
-const socket = io.connect()
+const socket = io.connect('http://127.0.0.1:22233')
 
 // 监听change_from_server
-socket.on('change_from_server', function(data) {
-
-  document.getElementById('taxtarea').value = data
+socket.on('from_server', function(data) {
+  document.getElementById('textarea').value = data.msg
 })
 
-document.ready = function() {
-  document.getElementById('taxtarea').onkeyup = function() {
-    socket.emit('data', {msg: document.getElementById('taxtarea').value})
+window.onload = function() {
+  document.getElementById('textarea').onkeyup = function() {
+    socket.emit('update', {msg: document.getElementById('textarea').value})
   }
 }
