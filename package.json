@@ -9,6 +9,7 @@
   "author": "daniel",
   "license": "ISC",
   "devDependencies": {
+    "crypto": "^1.0.1",
     "formidable": "^1.2.1",
     "jade": "^1.11.0",
     "mime": "^2.4.0",
